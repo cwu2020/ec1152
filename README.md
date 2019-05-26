@@ -4,22 +4,6 @@ using google datacommons feature selection to predict census tract-level social 
 EC1152 Empirical Project 4: Using Google DataCommons to Predict Social Mobility
 Carra Wu
 Part 1
-5. Summary Statistics
-Variable Name	Label	Mean	Std Dev.
-personagey~g	Language Spoken At Home— Asian And Pacific Island	0.0023283	0.0045491
-personagey~u	Educational Attainment— Doctorate Degree	0.0061354	0.006269
-v4	Language Spoken At Home— Other Languages	0.0028614	0.0210205
-personagey~m	Veteran Status	0.0692684	0.021975
-v6	Educational Attainment— Regular High School Diploma	0.1948594	0.0450406
-personagey~i	Foreign Born Status	0.050153	0.0596825
-v8	US Native, Spanish Spoken at Home	0.0583751	0.1466602
-persongend~e	Female	0.5051076	0.0269536
-v13	Foreign Born, Only English Spoken at Home	0.0096834	0.009656
-v14	Only English Spoken at Home	-0.000033	0.0000261
-v15	Educational Attainment: Master’s Degree	0.0396131	0.0212971
-v16	Educational Attainment: Bachelor’s Degree	0.0967177	0.0414841
-housinguni~s	Owner Occupied Housing	0.5994186	0.919306
-housinguni~w	Renter Occupied Housing With Cash Rent	0.2233599	0.0860562
 
 6. There is a strong positive relationship between the rate of doctorate degree attainment and social mobility as well as between the rate of bachelor’s degree attainment and social mobility, with regression coefficients of 0.959231 and 0.8773028, respectively. Somewhat surprisingly, there’s a strong negative relationship between rate of master’s degree attainment and social mobility, with a regression coefficient of -0.9051331. All other predictors show weak positive and negative correlations with social mobility, with the exception of the “Only English Spoken at Home” variable, which we discuss in question 8.
 
@@ -66,8 +50,3 @@ The mean squared errors of each prediction method against the actual measure of 
 In the out-of-sample test data, the linear regression (OLS) model did best, which is consistent with the results from the in-sample training data. 
 
 One thing to note is that it is surprising that in both the in-sample and out-of-sample datasets, the decision tree performed better than randomized forest. Because the randomized forest gives the average across many different trees, one would expect that it would outperform the decision tree, which might be overfitted to the training data. In this case, the decision tree vastly outperforms the random forest, which might indicate that the training and test data have very similar qualities.
-
-Regression Model	In-Sample MSE	Out-of-Sample MSE
-Random Forest Prediction (Question 11)	0.004271803	0.003974762
-OLS Prediction MSE (Question 8)	0.0003477129	0.0005073468
-Decision Tree Prediction MSE (Question 9)	0.0007511369	0.001005525
