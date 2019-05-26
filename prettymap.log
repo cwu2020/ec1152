@@ -1,0 +1,50 @@
+-------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/carrawu/Documents/harvard/ec1152/prettymap.log
+  log type:  text
+ opened on:   2 May 2019, 21:18:05
+
+. 
+. use gdc_results.dta
+(Written by R.              )
+
+. 
+. ssc install maptile
+checking maptile consistency and verifying not already installed...
+all files already exist and are up to date.
+
+. ssc install spmap
+checking spmap consistency and verifying not already installed...
+all files already exist and are up to date.
+
+. maptile_install using "http://files.michaelstepner.com/geo_county2014.zip"
+
+/Users/carrawu/Library/Application Support/Stata/ado/personal/maptile_geographies
+    can't overwrite "county2014_coords.dta"; skipping
+    can't overwrite "county2014_database.dta"; skipping
+    can't overwrite "county2014_maptile.ado"; skipping
+    can't overwrite "county2014_maptile.smcl"; skipping
+
+successfully unzipped temp.zip to current directory
+total processed:  4
+        skipped:  4
+      extracted:  0
+
+To see the help file of the geography template, run:
+    maptile_geohelp geoname
+
+. 
+. 
+. rename geoid county
+
+. // maptile predictions_forest, geography(county2014)
+. // maptile predictions_ols, geography(county2014)
+. maptile predictions_tree, geography(county2014)
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /Users/carrawu/Documents/harvard/ec1152/prettymap.log
+  log type:  text
+ closed on:   2 May 2019, 21:18:09
+-------------------------------------------------------------------------------------------------------
